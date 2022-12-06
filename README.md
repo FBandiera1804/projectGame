@@ -95,7 +95,7 @@ sudo dnf upgrade --refresh -y && sudo dnf install java-latest-openjdk.x86_64 mav
 mvn assembly:assembly -DdescriptorId=jar-with-dependencies
 ```
 
-Verranno poi generati due file `.jar` per essere eseguiti.
+Verranno poi generati due file `.jar` nella cartella `target` per essere eseguiti.
 
 - Per eseguire il gioco:
 
