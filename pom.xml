@@ -81,7 +81,7 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>com.projectGame.App.java</mainClass>
+							<mainClass>com.projectGame.App</mainClass>
 						</manifest>
 					</archive>
 					<descriptorRefs>
