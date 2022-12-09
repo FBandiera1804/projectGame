@@ -27,12 +27,6 @@ Puoi scaricare quest'ultimo da questo link:
 
 - [Adoptium OpenJDK](https://adoptium.net)
 
-Scaricare anche Maven per generare il file eseguibile.
-
-Link del download:
-
-- [Apache Maven](https://maven.apache.org/download.cgi)
-
 Per l'esecuzione (Build):
 
 Scaricare il source code del gioco:
@@ -41,7 +35,7 @@ Scaricare il source code del gioco:
 Il file `pom.xml` va installato tramite maven, quindi aprire powershell nella cartella ed eseguire:
 
 ```bash
-mvn assembly:assembly -DdescriptorId=jar-with-dependencies
+mvnw assembly:assembly -DdescriptorId=jar-with-dependencies
 ```
 
 Dopo questo step, apri la cartella `target`.
@@ -63,8 +57,6 @@ java -jar projectGame-0.0.1-SNAPSHOT-jar-with-dependencies.jar
 **Linux:**
 
 Scaricare "Java Runtime Environment" v.17 o versione successiva.
-
-Scaricare "Apache Maven" per la vostra distro per generare gli eseguibili.
 
 A seconda della tua distro esegui questi comandi.
 
@@ -92,7 +84,7 @@ sudo dnf upgrade --refresh -y && sudo dnf install java-latest-openjdk.x86_64 mav
 - Aprire un terminale nella directory del codice ed eseguire:
 
 ```bash
-mvn assembly:assembly -DdescriptorId=jar-with-dependencies
+mvnw assembly:assembly -DdescriptorId=jar-with-dependencies
 ```
 
 Verranno poi generati due file `.jar` nella cartella `target` per essere eseguiti.
