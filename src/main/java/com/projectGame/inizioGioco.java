@@ -1,9 +1,6 @@
 package com.projectGame;
 
 public class inizioGioco {
-	//Variabili relative al personaggio
-	private String nomePersonaggio;
-	private String nomeArma;
 	
 	//Variabili relative alle scelte di gioco.
 	private int sceltaN1;
@@ -13,20 +10,6 @@ public class inizioGioco {
 	private int sceltaSelezionata;
 	
 	//Get&Set generati da Eclipse IDE
-	public String getNomePersonaggio() {
-		return nomePersonaggio;
-	}
-	public void setNomePersonaggio(String nomePersonaggio) {
-		this.nomePersonaggio = nomePersonaggio;
-	}
-	
-	public String getNomeArma() {
-		return nomeArma;
-	}
-	public void setNomeArma(String nomeArma) {
-		this.nomeArma = nomeArma;
-	}
-	
 	public int getSceltaN1() {
 		return sceltaN1;
 	}
