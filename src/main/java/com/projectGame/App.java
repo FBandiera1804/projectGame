@@ -58,6 +58,35 @@ public class App
         		st1.setSceltaSelezionata(3);
         		System.out.println("Che sfortuna, il drago (senza volerlo), ti ha bruciato!");
         	break;
+        }   
+        
+        stage2 st2 = new stage2();
+        st2.setSceltaUno(1);
+        st2.setSceltaDue(2);
+        st2.setSceltaTre(3);
+        st2.setSceltaQuattro(4);
+        
+        System.out.println("ti sei rifugiato in una caverna, sei rimasto senza cibo. \n Che fai? ");
+        System.out.println("1) Ti crei una lancia con le pietre della caverna e bastoni di alberi e vai a caccia.");
+        System.out.println("2) Mangi dei frutti trovati su una pianta selvatica.");
+        System.out.println("3) Esci dalla caverna e cerchi qualcuno che può aiutarti.");
+        
+        st2.setSceltaSelezionata(userInput.nextInt());
+        
+        switch(st2.getSceltaSelezionata()) {
+        case 1:
+        	st2.setSceltaSelezionata(1);
+        	System.out.println("Sei a costruire una lancia e a procurarti del cibo.");
+        break;
+        case 2:
+        	st2.setSceltaSelezionata(2);
+        	System.out.println("Mangiando uno dei frutti vieni avvelenato.");
+        break;
+        case 3:
+        	st2.setSceltaSelezionata(3);
+        	System.out.println("Uscendo disarmato trovi sulla strada un mostro che ti cattura e ti mangia.");
+        break;
+        	
         }
     }
 }
