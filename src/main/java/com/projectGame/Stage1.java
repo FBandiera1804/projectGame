@@ -2,42 +2,51 @@ package com.projectGame;
 
 public class Stage1 {
 	//Dichiaro le variabili delle scelte di gioco.
-	String sceltaUno;
-	String sceltaDue;
-	String sceltaTre;
-	String sceltaQuattro;	
+	int sceltaUno;
+	int sceltaDue;
+	int sceltaTre;
+	int sceltaQuattro;
+	int sceltaSelezionata;
 	
 	//Get&Set Autogenerati da Eclipse IDE
-	public String getSceltaUno() {
+	public int getSceltaUno() {
 		return sceltaUno;
 	}
 	
-	public void setSceltaUno(String sceltaUno) {
+	public void setSceltaUno(int sceltaUno) {
 		this.sceltaUno = sceltaUno;
 	}
 	
-	public String getSceltaDue() {
+	public int getSceltaDue() {
 		return sceltaDue;
 	}
 	
-	public void setSceltaDue(String sceltaDue) {
+	public void setSceltaDue(int sceltaDue) {
 		this.sceltaDue = sceltaDue;
 	}
 	
-	public String getSceltaTre() {
+	public int getSceltaTre() {
 		return sceltaTre;
 	}
 	
-	public void setSceltaTre(String sceltaTre) {
+	public void setSceltaTre(int sceltaTre) {
 		this.sceltaTre = sceltaTre;
 	}
 
-	public String getSceltaQuattro() {
+	public int getSceltaQuattro() {
 		return sceltaQuattro;
 	}
 
-	public void setSceltaQuattro(String sceltaQuattro) {
+	public void setSceltaQuattro(int sceltaQuattro) {
 		this.sceltaQuattro = sceltaQuattro;
+	}
+
+	public int getSceltaSelezionata() {
+		return sceltaSelezionata;
+	}
+
+	public void setSceltaSelezionata(int sceltaSelezionata) {
+		this.sceltaSelezionata = sceltaSelezionata;
 	}
 	
 }
