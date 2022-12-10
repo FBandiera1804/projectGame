@@ -1,15 +1,28 @@
 package com.projectGame;
-
+import java.io.IOException;
 import java.util.Scanner;
 
-public class App 
-{
-    public static void main( String[] args )
-    {
+public class App {
+	
+	public static void clearConsole() {
+	    try {
+	        if (System.getProperty("os.name").contains("Windows")) {
+	            new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+	        }
+	        else {
+	            System.out.print("\033\143");
+	        }
+	    } catch (IOException | InterruptedException ex) {}
+	}
+	
+    public static void main( String[] args ) {
+    	
         Scanner userInput = new Scanner(System.in);
         
         //Creazione del costruttore per le variabili di gioco.
         inizioGioco in = new inizioGioco();
+        
+        clearConsole();
         
         System.out.println("Vuoi iniziare quest'avventura? \n");
         System.out.println("1) Gioca! \n 2) Riavvia gioco. \n 3) Ritirati.");
@@ -26,10 +39,11 @@ public class App
         		System.out.println("Hai riavviato il gioco.");
         	break;
         	case 3:
-        		System.out.println("bruh.");
+//        		System.exit(0);
         	break;
         }
         
+        clearConsole();
         
         Stage1 st1 = new Stage1();
         st1.setSceltaUno(1);
@@ -49,6 +63,7 @@ public class App
         	case 1:
         		st1.setSceltaSelezionata(1);
         		System.out.println("Mi dispiace, sei stato cotto a puntino dal drago.\n Game over!!!");
+        		System.exit(0);
         	break;
         	case 2:
         		st1.setSceltaSelezionata(2);
@@ -57,8 +72,11 @@ public class App
         	case 3:
         		st1.setSceltaSelezionata(3);
         		System.out.println("Che sfortuna, il drago (senza volerlo), ti ha bruciato!");
+        		System.exit(0);
         	break;
         }   
+        
+        clearConsole();
         
         stage2 st2 = new stage2();
         st2.setSceltaUno(1);
@@ -81,12 +99,14 @@ public class App
         case 2:
         	st2.setSceltaSelezionata(2);
         	System.out.println("Mangiando uno dei frutti vieni avvelenato.");
+        	System.exit(0);
         break;
         case 3:
         	st2.setSceltaSelezionata(3);
-        	System.out.println("Uscendo disarmato trovi sulla strada un mostro che ti cattura e ti mangia.");
-        break;
-        	
+        	System.out.println("Uscendo disarmato trovi sulla strada un mostro che ti divora.");
+        	System.exit(0);
+        break;	
         }
+        //Da continuare
     }
 }
