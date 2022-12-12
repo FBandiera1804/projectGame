@@ -116,6 +116,19 @@ public class App {
         	System.out.println("Ti sei ritirato, potevi giocare di più...");
         	System.exit(0);
         }
-        //Da continuare
+        
+        Stage3 st3 = new Stage3();
+        st3.setSceltaUno(1);
+        st3.setSceltaDue(2);
+        st3.setSceltaTre(3);
+        st3.setSceltaQuattro(4);
+        
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
+        
+        st3.setSceltaSelezionata(userInput.nextInt());
     }
 }
