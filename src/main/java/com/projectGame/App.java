@@ -63,7 +63,7 @@ public class App {
         switch(st1.getSceltaSelezionata()) {
         	case 1:
         		st1.setSceltaSelezionata(1);
-        		System.out.println("Mi dispiace, sei stato cotto a puntino dal drago.\n Game over!!!");
+        		System.out.println("Mi dispiace, sei stato cotto a puntino dal drago.");
         		System.exit(0);
         	break;
         	case 2:
@@ -79,6 +79,12 @@ public class App {
         		st1.setSceltaSelezionata(4);
         		System.out.println("Ti sei ritirato, che delusione...");
         		System.exit(0);
+        	break;
+        	case 5:
+        		st1.setSceltaSelezionata(5);
+        		System.out.println("\n Sei simpaticissimo...\n Gli sviluppatori del gioco ti dedicano un video: \n https://www.youtube.com/watch?v=-iOzHoxsor4");
+        		System.exit(0);
+        	break;
         }   
         
         clearConsole();
@@ -125,31 +131,32 @@ public class App {
         st3.setSceltaTre(3);
         st3.setSceltaQuattro(4);
         
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
+        System.out.println("Durante la caccia incontri una strega. \n Notando non avevi nulla da mangiare e non avendo un posto per riposare ti invita a casa sua. \n Che fai?");
+        System.out.println("1) Accetti l'invito");
+        System.out.println("2) Rifiuti L'invito");
+        System.out.println("3) La ignori e cerchi di rapinarla");
+        System.out.println("4) Ritirati");
         
         st3.setSceltaSelezionata(userInput.nextInt());
         
         switch(st3.getSceltaSelezionata()) {
         case 1:
         	st3.setSceltaUno(1);
-        	System.out.println("sc1");
-        	System.exit(0);
+        	System.out.println("Hai accettato l'invito e la strega ti guida verso la sua casa");
         break;
         case 2:
         	st3.setSceltaDue(2);
-        	System.out.println("sc2");
+        	System.out.println("Hai continuato per la tua strada, ma durante l'esplorazione cadi da un burrone e muori");
         	System.exit(0);
         break;
         case 3:
         	st3.setSceltaTre(3);
-        	System.out.println("sc3");
+        	System.out.println("La strega, dallo spavento, evoca un golem di pietra. Vieni calpestato.");
+        	System.exit(0);
         break;
         case 4: 
         	st3.setSceltaQuattro(4);
+        	System.out.println("Ti sei ritirato...davvero??");
         	System.exit(0);
         break;
         }
