@@ -39,7 +39,7 @@ public class App {
         		System.out.println("Hai riavviato il gioco.");
         	break;
         	case 3:
-//        		System.exit(0);
+        		System.exit(0);
         	break;
         }
         
@@ -56,6 +56,7 @@ public class App {
         System.out.println("1) Combatti il drago a mani nude, tanto cosa potrà mai andare storto?");
         System.out.println("2) Scappi attraverso la foresta sperando di non essere visto");
         System.out.println("3) Provi a nasconderti dietro gli alberi");
+        System.out.println("4) Ritirati.");
         
         st1.setSceltaSelezionata(userInput.nextInt());
         
@@ -74,6 +75,10 @@ public class App {
         		System.out.println("Che sfortuna, il drago (senza volerlo), ti ha bruciato!");
         		System.exit(0);
         	break;
+        	case 4:
+        		st1.setSceltaSelezionata(4);
+        		System.out.println("Ti sei ritirato, che delusione...");
+        		System.exit(0);
         }   
         
         clearConsole();
@@ -88,6 +93,7 @@ public class App {
         System.out.println("1) Ti crei una lancia con le pietre della caverna e bastoni di alberi e vai a caccia.");
         System.out.println("2) Mangi dei frutti trovati su una pianta selvatica.");
         System.out.println("3) Esci dalla caverna e cerchi qualcuno che può aiutarti.");
+        System.out.println("4) Ritirati.");
         
         st2.setSceltaSelezionata(userInput.nextInt());
         
@@ -105,7 +111,10 @@ public class App {
         	st2.setSceltaSelezionata(3);
         	System.out.println("Uscendo disarmato trovi sulla strada un mostro che ti divora.");
         	System.exit(0);
-        break;	
+        break;
+        case 4:
+        	System.out.println("Ti sei ritirato, potevi giocare di più...");
+        	System.exit(0);
         }
         //Da continuare
     }
