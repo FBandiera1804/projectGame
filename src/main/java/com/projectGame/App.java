@@ -117,6 +117,8 @@ public class App {
         	System.exit(0);
         }
         
+        clearConsole();
+        
         Stage3 st3 = new Stage3();
         st3.setSceltaUno(1);
         st3.setSceltaDue(2);
@@ -130,5 +132,26 @@ public class App {
         System.out.println("");
         
         st3.setSceltaSelezionata(userInput.nextInt());
+        
+        switch(st3.getSceltaSelezionata()) {
+        case 1:
+        	st3.setSceltaUno(1);
+        	System.out.println("sc1");
+        	System.exit(0);
+        break;
+        case 2:
+        	st3.setSceltaDue(2);
+        	System.out.println("sc2");
+        	System.exit(0);
+        break;
+        case 3:
+        	st3.setSceltaTre(3);
+        	System.out.println("sc3");
+        break;
+        case 4: 
+        	st3.setSceltaQuattro(4);
+        	System.exit(0);
+        break;
+        }
     }
 }
