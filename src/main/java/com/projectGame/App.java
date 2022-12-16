@@ -36,10 +36,10 @@ public class App {
         		System.out.println();
         	break;
         	case 2:
-        		System.out.println("Hai riavviato il gioco.");
+        		System.exit(0);
         	break;
         	case 3:
-        		System.exit(0);
+        		System.out.println("Hai riavviato il gioco.");
         	break;
         }
         
@@ -55,8 +55,8 @@ public class App {
         System.out.println("Cosa scegli di fare?");
         System.out.println("1) Combatti il drago a mani nude, tanto cosa potrà mai andare storto?");
         System.out.println("2) Scappi attraverso la foresta sperando di non essere visto");
-        System.out.println("3) Provi a nasconderti dietro gli alberi");
-        System.out.println("4) Ritirati.");
+        System.out.println("3) Ritirati");
+        System.out.println("4) Riavvia gioco.");
         
         st1.setSceltaSelezionata(userInput.nextInt());
         
@@ -72,18 +72,12 @@ public class App {
         	break;
         	case 3:
         		st1.setSceltaSelezionata(3);
-        		System.out.println("Che sfortuna, il drago (senza volerlo), ti ha bruciato!");
+        		System.out.println("Hai riavviato il gioco.");
         		System.exit(0);
         	break;
         	case 4:
         		st1.setSceltaSelezionata(4);
-        		System.out.println("Ti sei ritirato, che delusione...");
-        		System.exit(0);
-        	break;
-        	case 5:
-        		st1.setSceltaSelezionata(5);
-        		System.out.println("\n Sei simpaticissimo...\n Gli sviluppatori del gioco ti dedicano un video: \n https://www.youtube.com/watch?v=-iOzHoxsor4");
-        		System.exit(0);
+           		System.out.println("Ti sei ritirato, Hai perso.");
         	break;
         }   
         
@@ -95,11 +89,11 @@ public class App {
         st2.setSceltaTre(3);
         st2.setSceltaQuattro(4);
         
-        System.out.println("ti sei rifugiato in una caverna, sei rimasto senza cibo. \n Che fai? ");
+        System.out.println("Ti sei rifugiato in una caverna, sei rimasto senza cibo. \n Che fai? ");
         System.out.println("1) Ti crei una lancia con le pietre della caverna e bastoni di alberi e vai a caccia.");
         System.out.println("2) Mangi dei frutti trovati su una pianta selvatica.");
-        System.out.println("3) Esci dalla caverna e cerchi qualcuno che può aiutarti.");
-        System.out.println("4) Ritirati.");
+        System.out.println("3) Ritirati.");
+        System.out.println("4) Riavvia il gioco.");
         
         st2.setSceltaSelezionata(userInput.nextInt());
         
@@ -115,11 +109,11 @@ public class App {
         break;
         case 3:
         	st2.setSceltaSelezionata(3);
-        	System.out.println("Uscendo disarmato trovi sulla strada un mostro che ti divora.");
+        	System.out.println("Hai riavviato il gioco");
         	System.exit(0);
         break;
         case 4:
-        	System.out.println("Ti sei ritirato, potevi giocare di più...");
+        	System.out.println("Ti sei ritirato, hai perso.");
         	System.exit(0);
         }
         
@@ -134,8 +128,8 @@ public class App {
         System.out.println("Durante la caccia incontri una strega. \n Notando non avevi nulla da mangiare e non avendo un posto per riposare ti invita a casa sua. \n Che fai?");
         System.out.println("1) Accetti l'invito");
         System.out.println("2) Rifiuti L'invito");
-        System.out.println("3) La ignori e cerchi di rapinarla");
-        System.out.println("4) Ritirati");
+        System.out.println("3) Ritirati");
+        System.out.println("4) Riavvia gioco");
         
         st3.setSceltaSelezionata(userInput.nextInt());
         
@@ -151,12 +145,12 @@ public class App {
         break;
         case 3:
         	st3.setSceltaTre(3);
-        	System.out.println("La strega, dallo spavento, evoca un golem di pietra. Vieni calpestato.");
+        	System.out.println("Ti sei ritirato, hai perso.");
         	System.exit(0);
         break;
         case 4: 
         	st3.setSceltaQuattro(4);
-        	System.out.println("Ti sei ritirato...davvero??");
+        	System.out.println("Hai riavviato il gioco");
         	System.exit(0);
         break;
         }
