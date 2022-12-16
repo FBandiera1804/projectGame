@@ -116,7 +116,7 @@ public class App {
         st2.setSceltaTre(3);
         st2.setSceltaQuattro(4);
         
-        System.out.println("Mentre camminavi nella foresta, tutto d'un tratto inizia a piovere, cerchi riparo e trovi una caverna. "
+        System.out.println("Mentre camminavi nella foresta, tutto d'un tratto inizia a piovere, cerchi riparo e trovi una caverna."
         		+ "Non hai cibo e stai morendo di fame. Quindi a quel punto cerchi qualcosa per creare una lancia."
         		+ "Mentre sei a cercare cibo davanti a te vedi passare tre animali: un maiale, una pecora e un cervo."
         		+ "Che fai?");
@@ -175,7 +175,11 @@ public class App {
         st3.setSceltaTre(3);
         st3.setSceltaQuattro(4);
         
-        System.out.println("Durante la caccia incontri una strega. \n Notando non avevi nulla da mangiare e non avendo un posto per riposare ti invita a casa sua. \n Che fai?");
+        System.out.println("Passata la notte insonne, ti ritrovi affamato e solo. Tutto d'un tratto durante il tragitto alla ricerca di un luogo dove soggiornare,"
+        		+ "ti imbatti in una strana viandante. Man mano che ti avvicini, ti senti stanco ed assonnato, riesci a guardare la figura misteriosa"
+        		+ "negli occhi di sfuggita e quella figura misteriosa, si rivela essere un demone. Cadi in un sonno profondo, ed il demone avendo già"
+        		+ "avuto a che fare con i dispersi nella foresta, veglia su di te. Al tuo risveglio si presenta e ti dice di essere una strega"
+        		+ "di nome Evelyn, quest'ultima ti offre di soggiornare a casa sua. Che fai?");
         System.out.println("1) Accetti l'invito");
         System.out.println("2) Rifiuti L'invito");
         System.out.println("3) Ritirati");
