@@ -116,10 +116,13 @@ public class App {
         st2.setSceltaTre(3);
         st2.setSceltaQuattro(4);
         
-        System.out.println("Ti sei rifugiato in una caverna, sei rimasto senza cibo. \nChe fai? ");
-        System.out.println("1) Ti crei una lancia con le pietre della caverna e bastoni di alberi e vai a caccia.");
-        System.out.println("2) Mangi dei frutti trovati su una pianta selvatica.");
-        System.out.println("3) /give @p food.");
+        System.out.println("Mentre camminavi nella foresta, tutto d'un tratto inizia a piovere, cerchi riparo e trovi una caverna. "
+        		+ "Non hai cibo e stai morendo di fame. Quindi a quel punto cerchi qualcosa per creare una lancia."
+        		+ "Mentre sei a cercare cibo davanti a te vedi passare tre animali: un maiale, una pecora e un cervo."
+        		+ "Che fai?");
+        System.out.println("1) Uccidi il maiale.");
+        System.out.println("2) Uccidi la pecora.");
+        System.out.println("3) Uccidi il cervo.");
         System.out.println("4) Ritirati.");
         
         st2.setSceltaSelezionata(userInput.nextInt());
@@ -127,16 +130,16 @@ public class App {
         switch(st2.getSceltaSelezionata()) {
         case 1:
         	st2.setSceltaSelezionata(1);
-        	System.out.println("Sei a costruire una lancia e a procurarti del cibo. \n Hai vinto.\n ");
+        	System.out.println("Hai ucciso il maiale e prendi la sua carne. \n Hai vinto.\n ");
         break;
         case 2:
         	st2.setSceltaSelezionata(2);
-        	System.out.println("Mangiando uno dei frutti vieni avvelenato.");
+        	System.out.println("Uccidi la pecora scopri che è maledetta ed inizi a sentirti male.");
         	System.exit(0);
         break;
         case 3:
         	st2.setSceltaSelezionata(3);
-        	System.out.println("Non...penso funzioni. Hai perso.");
+        	System.out.println("Il cervo ti vede e scappa via. Inizi ad inseguirlo ma nel durante cadi e muori di fame e sete. Hai perso.");
         	System.exit(0);
         break;
         case 4:
