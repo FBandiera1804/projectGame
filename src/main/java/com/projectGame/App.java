@@ -24,6 +24,7 @@ public class App {
         
         clearConsole();
         
+        //Menu inizio gioco.
         System.out.println("Vuoi iniziare quest'avventura? \n");
         System.out.println("1) Gioca! \n 2) Riavvia gioco. \n 3) Ritirati.");
         in.setSceltaN1(1);
@@ -45,18 +46,19 @@ public class App {
         
         clearConsole();
         
+        //Inizia lo stage 1
         Stage1 st1 = new Stage1();
         st1.setSceltaUno(1);
         st1.setSceltaDue(2);
         st1.setSceltaTre(3);
         st1.setSceltaQuattro(4);
         
-        System.out.println("Ti sei risvegliato in una foresta buia. \n In lontananza trovi un drago ostile molto pericoloso. \n");
+        System.out.println("Ti sei risvegliato in una foresta buia.\n In lontananza trovi un drago ostile molto pericoloso. \n");
         System.out.println("Cosa scegli di fare?");
         System.out.println("1) Combatti il drago a mani nude, tanto cosa potrà mai andare storto?");
         System.out.println("2) Scappi attraverso la foresta sperando di non essere visto");
-        System.out.println("3) Ritirati");
-        System.out.println("4) Riavvia gioco.");
+        System.out.println("3) Stringo ");
+        System.out.println("4) Ritirati");
         
         st1.setSceltaSelezionata(userInput.nextInt());
         
@@ -68,7 +70,7 @@ public class App {
         	break;
         	case 2:
         		st1.setSceltaSelezionata(2);
-        		System.out.println("Sei riuscito a scappare!!");
+        		System.out.println("Sei riuscito a scappare! Hai superato il livello. \n");
         	break;
         	case 3:
         		st1.setSceltaSelezionata(3);
@@ -78,22 +80,45 @@ public class App {
         	case 4:
         		st1.setSceltaSelezionata(4);
            		System.out.println("Ti sei ritirato, Hai perso.");
+           		System.exit(0);
         	break;
-        }   
+        }
+        
+        //Scelta continua gioco, riavvio o fine gioco.
+        System.out.println("Vuoi continuare?");
+        System.out.println("1) Passa al prossimo livello.");
+        System.out.println("2) Riavvia il gioco.");
+        System.out.println("3) Ritirati.");
+        
+        st1.setSceltaSelezionata(userInput.nextInt());
+        
+        switch(st1.getSceltaSelezionata()) {
+        case 1:
+        	System.out.println();
+        break;
+        case 2:
+        	System.exit(0);
+        break;
+        case 3:
+        	System.exit(0);
+        break;
+        }
+        
         
         clearConsole();
         
+        //Stage 2
         stage2 st2 = new stage2();
         st2.setSceltaUno(1);
         st2.setSceltaDue(2);
         st2.setSceltaTre(3);
         st2.setSceltaQuattro(4);
         
-        System.out.println("Ti sei rifugiato in una caverna, sei rimasto senza cibo. \n Che fai? ");
+        System.out.println("Ti sei rifugiato in una caverna, sei rimasto senza cibo. \nChe fai? ");
         System.out.println("1) Ti crei una lancia con le pietre della caverna e bastoni di alberi e vai a caccia.");
         System.out.println("2) Mangi dei frutti trovati su una pianta selvatica.");
-        System.out.println("3) Ritirati.");
-        System.out.println("4) Riavvia il gioco.");
+        System.out.println("3) /give @p food.");
+        System.out.println("4) Ritirati.");
         
         st2.setSceltaSelezionata(userInput.nextInt());
         
@@ -109,7 +134,7 @@ public class App {
         break;
         case 3:
         	st2.setSceltaSelezionata(3);
-        	System.out.println("Hai riavviato il gioco");
+        	System.out.println("Non...penso funzioni. Hai perso.");
         	System.exit(0);
         break;
         case 4:
@@ -119,6 +144,7 @@ public class App {
         
         clearConsole();
         
+        //Stage 3
         Stage3 st3 = new Stage3();
         st3.setSceltaUno(1);
         st3.setSceltaDue(2);
@@ -154,5 +180,75 @@ public class App {
         	System.exit(0);
         break;
         }
+        
+        clearConsole();
+        
+        //Stage 4 
+        System.out.println("e");
+        System.out.println("1) e");
+        System.out.println("2) e");
+        System.out.println("3) Ritirati");
+        System.out.println("4) Riavvia gioco");
+        
+        st3.setSceltaSelezionata(userInput.nextInt());
+        
+        switch(st3.getSceltaSelezionata()) {
+        case 1:
+        	st3.setSceltaUno(1);
+        	System.out.println("w");
+        	System.exit(0);
+        break;
+        case 2:
+        	st3.setSceltaDue(2);
+        	System.out.println("w");
+        break;
+        case 3:
+        	st3.setSceltaTre(3);
+        	System.out.println("Ti sei ritirato, hai perso.");
+        	System.exit(0);
+        break;
+        case 4: 
+        	st3.setSceltaQuattro(4);
+        	System.out.println("Hai riavviato il gioco");
+        	System.exit(0);
+        break;
+        }
+        
+        clearConsole();
+        
+        //Stage 5
+        System.out.println("w");
+        System.out.println("1) w");
+        System.out.println("2) w");
+        System.out.println("3) Ritirati");
+        System.out.println("4) Riavvia gioco");
+        
+        st3.setSceltaSelezionata(userInput.nextInt());
+        
+        switch(st3.getSceltaSelezionata()) {
+        case 1:
+        	st3.setSceltaUno(1);
+        	System.out.println("w");
+        break;
+        case 2:
+        	st3.setSceltaDue(2);
+        	System.out.println("w");
+        	System.exit(0);
+        break;
+        case 3:
+        	st3.setSceltaTre(3);
+        	System.out.println("Ti sei ritirato, hai perso.");
+        	System.exit(0);
+        break;
+        case 4: 
+        	st3.setSceltaQuattro(4);
+        	System.out.println("Hai riavviato il gioco");
+        	System.exit(0);
+        break;
+        }
+        
+        clearConsole();
+        System.out.println("Hai fatto questo.");
+        System.out.println("Hai vinto il gioco. Congratulazioni!");
     }
 }
