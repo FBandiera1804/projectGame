@@ -61,10 +61,13 @@ public class App {
         System.out.println("2) Scappi attraverso la foresta sperando di non essere visto");
         System.out.println("3) Ti nascondi dietro un albero fino a quando il drago non se ne va");
         System.out.println("4) Ritirati");
-        
+
         st1.setSceltaSelezionata(userInput.nextInt());
         
         switch(st1.getSceltaSelezionata()) {
+        	default:
+        		System.out.println("Inserisci un numero da 1-4 per favore.");
+        	break;
         	case 1:
         		st1.setSceltaSelezionata(1);
         		System.out.println("Hai perso. Sei stato bruciato vivo con un soffio.");
@@ -175,11 +178,11 @@ public class App {
         st3.setSceltaTre(3);
         st3.setSceltaQuattro(4);
         
-        System.out.println("Passata la notte insonne, ti ritrovi affamato e solo. Tutto d'un tratto durante il tragitto alla ricerca di un luogo dove soggiornare,"
-        		+ "ti imbatti in una strana viandante. Man mano che ti avvicini, ti senti stanco ed assonnato, riesci a guardare la figura misteriosa"
-        		+ "negli occhi di sfuggita e quella figura misteriosa, si rivela essere un demone. Cadi in un sonno profondo, ed il demone avendo già"
-        		+ "avuto a che fare con i dispersi nella foresta, veglia su di te. Al tuo risveglio si presenta e ti dice di essere una strega"
-        		+ "di nome Evelyn, quest'ultima ti offre di soggiornare a casa sua. Che fai?");
+        System.out.println("Passata la notte insonne, durante il tragitto alla ricerca di un luogo dove soggiornare, "
+        		+ "ti imbatti in una strana viandante. Man mano che ti avvicini, ti senti stanco ed assonnato, riesci a guardare la figura misteriosa "
+        		+ "negli occhi, e la figura misteriosa si rivela essere una strega. Cadi in un sonno profondo, e quest'ultima, avendo già "
+        		+ "avuto a che fare con i dispersi nella foresta, veglia su di te. Al tuo risveglio si presenta e ti dice di essere una strega "
+        		+ "di nome Evelyn, e tra varie introduzioni ti invita a soggiornare presso casa sua. Cosa decidi di fare?");
         System.out.println("1) Accetti l'invito");
         System.out.println("2) Rifiuti L'invito");
         System.out.println("3) Ritirati");
@@ -194,7 +197,7 @@ public class App {
         break;
         case 2:
         	st3.setSceltaDue(2);
-        	System.out.println("Hai continuato per la tua strada, ma durante l'esplorazione cadi da un burrone e muori");
+        	System.out.println("Hai continuato per la tua strada,");
         	System.exit(0);
         break;
         case 3:
@@ -233,9 +236,11 @@ public class App {
         
         //Stage 4
         Stage4 st4 = new Stage4();
-        System.out.println("Sei arrivato alla casa della strega. Appena entrati dentro, la casa si trasforma in un'arena e vieni sfidato dalla strega.\n Accetti?");
-        System.out.println("1) Si, accetti");
-        System.out.println("2) No, rifiuti");
+        System.out.println("Arrivato a casa di Evelyn, mentre inizi a sentirti a tuo agio tra chiacchiere e risate, la strega rivela le sue vere intenzioni:\n"
+        		+ "Un combattimento all'ultimo sangue per concedergli il ritorno a casa dove, in caso di perdita, finiresti trasformato in un mostro.\n"
+        		+ "Non hai molta scelta, come pensi di continuare?");
+        System.out.println("1) Accetti ed inizi a prepararti per lo scontro.");
+        System.out.println("2) Rifiuti e cerchi di scappare dalla strega.");
         System.out.println("3) Ritirati");
         System.out.println("4) Riavvia gioco");
         
@@ -244,16 +249,16 @@ public class App {
         switch(st4.getSceltaSelezionata()) {
         case 1:
         	st4.setSceltaUno(1);
-        	System.out.println("Durante lo scontro riesci a rompere lo scettro della strega usando la lancia e la sconfiggi.\nHai superato il livello");
+        	System.out.println("La strega prepara le armi e l'arena per lo scontro.\nHai superato il livello");
         break;
         case 2:
         	st4.setSceltaDue(2);
-        	System.out.println("La strega, sentendosi presa in giro, ti coglie di sopresa mentre cerchi di uscire dalla casa e muori.\nHai perso");
+        	System.out.println("La strega era già un passo più avanti di te, vieni fulminato dalla maniglia della porta appena provi ad uscire.\nHai perso");
         	System.exit(0);
         break;
         case 3:
         	st4.setSceltaTre(3);
-        	System.out.println("Ti sei ritirato, che peccato.");
+        	System.out.println("Ti sei ritirato.");
         	System.exit(0);
         break;
         case 4: 
@@ -287,9 +292,11 @@ public class App {
         
         //Stage 5
         Stage5 st5 = new Stage5();
-        System.out.println("La strega ormai non può più contrattaccare. \n Cosa vuoi fare?");
-        System.out.println("1) Finiscila");
-        System.out.println("2) Risparmiala");
+        System.out.println("Lo scontro è feroce, attacchi e magie volano a destra e a manca, e durante lo scontro riesci a rubarle lo scettro.\n"
+        		+ "La strega non può contrattaccare senza armi, e ti trovi davanti alla scelta di risparmiarla o ucciderla."
+        		+ "Hai l'ultima chance, cosa farai?");
+        System.out.println("1) Finisci la strega.");
+        System.out.println("2) Risparmiala, in fondo non era cattiva come persona");
         System.out.println("3) Ritirati");
         System.out.println("4) Riavvia gioco");
         
@@ -299,11 +306,11 @@ public class App {
         case 1:
         	st5.setSceltaUno(1);
         	System.out.println("Hai ucciso la strega, ma rimarrai chiuso in quella casa fino alla morte. \n Hai perso");
+        	System.exit(0);
         break;
         case 2:
         	st5.setSceltaDue(2);
-        	System.out.println("Lasci in vita la strega, lei si scusa e ti riporta a casa. \n Hai vinto!");
-        	System.exit(0);
+        	System.out.println("Lasci in vita la strega, e lei si congratula per la tua abilità in combattimento.");
         break;
         case 3:
         	st5.setSceltaTre(3);
@@ -317,8 +324,15 @@ public class App {
         break;
         }
         
+        System.out.println("Premi invio per continuare...");
+        try {
+            System.in.read();
+        }  
+        catch(Exception e){} 
+        
         clearConsole();
-        System.out.println("Hai fatto questo.");
+        
+        System.out.println("Dopo i vari complimenti, la strega usa una delle sue magie per teletrasportarti di nuovo a casa.");
         System.out.println("Hai vinto il gioco. Congratulazioni!");
     }
 }
