@@ -14,10 +14,14 @@ public class App {
 	        }
 	    } catch (IOException | InterruptedException ex) {}
 	}
-	
-    public static void main( String[] args ) {
-    	
-        Scanner userInput = new Scanner(System.in);
+
+public static void main (String[] args) {
+	iniziaGioco();
+}
+
+private static void iniziaGioco() {
+		
+		Scanner userInput = new Scanner(System.in);
         
         //Creazione del costruttore per le variabili di gioco.
         inizioGioco in = new inizioGioco();
@@ -37,10 +41,10 @@ public class App {
         		System.out.println();
         	break;
         	case 2:
-        		System.exit(0);
+        		iniziaGioco();
         	break;
         	case 3:
-        		System.out.println("Hai riavviato il gioco.");
+        		System.exit(0);
         	break;
         }
         
@@ -102,7 +106,7 @@ public class App {
         	System.out.println();
         break;
         case 2:
-        	System.exit(0);
+        	iniziaGioco();
         break;
         case 3:
         	System.exit(0);
@@ -163,7 +167,7 @@ public class App {
         	System.out.println();
         break;
         case 2:
-        	System.exit(0);
+        	iniziaGioco();
         break;
         case 3:
         	System.exit(0);
@@ -207,8 +211,7 @@ public class App {
         break;
         case 4: 
         	st3.setSceltaQuattro(4);
-        	System.out.println("Hai riavviato il gioco");
-        	System.exit(0);
+        	iniziaGioco();
         break;
         }
         
@@ -225,7 +228,7 @@ public class App {
         	System.out.println();
         break;
         case 2:
-        	System.exit(0);
+        	iniziaGioco();
         break;
         case 3:
         	System.exit(0);
@@ -263,8 +266,7 @@ public class App {
         break;
         case 4: 
         	st4.setSceltaQuattro(4);
-        	System.out.println("Hai riavviato il gioco");
-        	System.exit(0);
+        	iniziaGioco();
         break;
         }
         
@@ -281,7 +283,7 @@ public class App {
         	System.out.println();
         break;
         case 2:
-        	System.exit(0);
+        	iniziaGioco();
         break;
         case 3:
         	System.exit(0);
@@ -319,8 +321,7 @@ public class App {
         break;
         case 4: 
         	st5.setSceltaQuattro(4);
-        	System.out.println("Hai riavviato il gioco");
-        	System.exit(0);
+        	iniziaGioco();
         break;
         }
         
@@ -336,3 +337,4 @@ public class App {
         System.out.println("Hai vinto il gioco. Congratulazioni!");
     }
 }
+
