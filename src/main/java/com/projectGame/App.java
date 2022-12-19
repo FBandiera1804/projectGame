@@ -4,28 +4,36 @@ import java.util.Scanner;
 
 public class App {
 	
+	//Dichiaro il metodo per cancellare i log precedenti della console
 	public static void clearConsole() {
 	    try {
+	    	//Comando per cancellare i log da Windows (cmd)
 	        if (System.getProperty("os.name").contains("Windows")) {
 	            new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
 	        }
+	        //Comando per cancellare i log da altri sistemi operativi
 	        else {
 	            System.out.print("\033\143");
 	        }
 	    } catch (IOException | InterruptedException ex) {}
 	}
 
+/*Ti prego, tu che leggi questo codice:
+  Questo aborto qui sotto per qualche motivo funziona e riavvia il gioco
+  Ho perso 3 giorni per sta stronzata, per favore chiudi un'occhio :(*/
 public static void main (String[] args) {
 	iniziaGioco();
 }
 
+//Inizio del gioco
 private static void iniziaGioco() {
-		
+		//Dichiaro lo scanner per l'input dell'utente.
 		Scanner userInput = new Scanner(System.in);
         
         //Creazione del costruttore per le variabili di gioco.
         inizioGioco in = new inizioGioco();
         
+        //Ogni volta che usiamo il clearConsole, I log vecchi vengono cancellati.
         clearConsole();
         
         //Menu inizio gioco.
@@ -36,6 +44,7 @@ private static void iniziaGioco() {
         in.setSceltaN3(3);
         in.setSceltaSelezionata(userInput.nextInt());
         
+        //Scelte dell'utente
         switch(in.getSceltaSelezionata()) {
         	case 1:
         		System.out.println();
@@ -50,13 +59,16 @@ private static void iniziaGioco() {
         
         clearConsole();
         
-        //Inizia lo stage 1
+        /*Inizia lo stage 1
+        Vengono dichiarati i get e i set per usare la classe dello stage 1 */
+        
         Stage1 st1 = new Stage1();
         st1.setSceltaUno(1);
         st1.setSceltaDue(2);
         st1.setSceltaTre(3);
         st1.setSceltaQuattro(4);
         
+        //Storia dello stage 1 e scelte.
         System.out.println("Ti sei risvegliato in una foresta buia. Hai perso i sensi e sei disorientato in piena notte."
         		+ "\nVicino trovi un trovi un drago ostile coperto da alberi. Non hai alcun mezzo per combatterlo e ti senti impaurito.\n"
         		+ "Cosa scegli di fare per sopravvivere? (Fai la tua scelta digitando il numero di quest'ultima.)\n");
@@ -65,10 +77,14 @@ private static void iniziaGioco() {
         System.out.println("2) Scappi attraverso la foresta sperando di non essere visto");
         System.out.println("3) Ti nascondi dietro un albero fino a quando il drago non se ne va");
         System.out.println("4) Ritirati");
-
+        
+        //Scanner della scelta utente
         st1.setSceltaSelezionata(userInput.nextInt());
         
+        //In base alla scelta dell'utente si continua avanti col gioco o si perde/ritira.
         switch(st1.getSceltaSelezionata()) {
+        	
+        	//Nel caso di numero sbagliato, con default viene rifiutato il numero.
         	default:
         		System.out.println("Inserisci un numero da 1-4 per favore.");
         	break;
@@ -123,6 +139,7 @@ private static void iniziaGioco() {
         st2.setSceltaTre(3);
         st2.setSceltaQuattro(4);
         
+        //Storia del secondo stage.
         System.out.println("Mentre camminavi nella foresta, tutto d'un tratto inizia a piovere, cerchi riparo e trovi una caverna."
         		+ "Non hai cibo e stai morendo di fame. Quindi a quel punto cerchi qualcosa per creare una lancia."
         		+ "Mentre sei a cercare cibo davanti a te vedi passare tre animali: un maiale, una pecora e un cervo."
@@ -132,8 +149,10 @@ private static void iniziaGioco() {
         System.out.println("3) Uccidi il cervo.");
         System.out.println("4) Ritirati.");
         
+        //Scelta dell'utente.
         st2.setSceltaSelezionata(userInput.nextInt());
         
+        //Scelte disponibili.
         switch(st2.getSceltaSelezionata()) {
         case 1:
         	st2.setSceltaSelezionata(1);
@@ -182,6 +201,7 @@ private static void iniziaGioco() {
         st3.setSceltaTre(3);
         st3.setSceltaQuattro(4);
         
+        //Storia dello stage tre.
         System.out.println("Passata la notte insonne, durante il tragitto alla ricerca di un luogo dove soggiornare, "
         		+ "ti imbatti in una strana viandante. Man mano che ti avvicini, ti senti stanco ed assonnato, riesci a guardare la figura misteriosa "
         		+ "negli occhi, e la figura misteriosa si rivela essere una strega. Cadi in un sonno profondo, e quest'ultima, avendo già "
@@ -194,6 +214,7 @@ private static void iniziaGioco() {
         
         st3.setSceltaSelezionata(userInput.nextInt());
         
+        //Scelte dello stage 3.
         switch(st3.getSceltaSelezionata()) {
         case 1:
         	st3.setSceltaUno(1);
@@ -239,6 +260,8 @@ private static void iniziaGioco() {
         
         //Stage 4
         Stage4 st4 = new Stage4();
+        
+        //Storia dello stage 4
         System.out.println("Arrivato a casa di Evelyn, mentre inizi a sentirti a tuo agio tra chiacchiere e risate, la strega rivela le sue vere intenzioni:\n"
         		+ "Un combattimento all'ultimo sangue per concedergli il ritorno a casa dove, in caso di perdita, finiresti trasformato in un mostro.\n"
         		+ "Non hai molta scelta, come pensi di continuare?");
@@ -249,6 +272,8 @@ private static void iniziaGioco() {
         
         st4.setSceltaSelezionata(userInput.nextInt());
         
+        /*Scelte disponibili (Per qualche motivo hanno messo le scelte nello switch.
+        Funziona ma non capisco perche'.)*/
         switch(st4.getSceltaSelezionata()) {
         case 1:
         	st4.setSceltaUno(1);
@@ -294,6 +319,8 @@ private static void iniziaGioco() {
         
         //Stage 5
         Stage5 st5 = new Stage5();
+        
+        //Storia dello stage 5
         System.out.println("Lo scontro è feroce, attacchi e magie volano a destra e a manca, e durante lo scontro riesci a rubarle lo scettro.\n"
         		+ "La strega non può contrattaccare senza armi, e ti trovi davanti alla scelta di risparmiarla o ucciderla."
         		+ "Hai l'ultima chance, cosa farai?");
@@ -304,6 +331,7 @@ private static void iniziaGioco() {
         
         st5.setSceltaSelezionata(userInput.nextInt());
         
+        //Scelte disponibili.
         switch(st5.getSceltaSelezionata()) {
         case 1:
         	st5.setSceltaUno(1);
@@ -333,8 +361,8 @@ private static void iniziaGioco() {
         
         clearConsole();
         
+        //Hai vinto il gioco.
         System.out.println("Dopo i vari complimenti, la strega usa una delle sue magie per teletrasportarti di nuovo a casa.");
         System.out.println("Hai vinto il gioco. Congratulazioni!");
     }
 }
-
